@@ -1,5 +1,5 @@
-# Inventory Database
-### Overview
+#	Inventory Database 🖥️
+## A. Overview
 
 This project provides SQL scripts to set up an Inventory Management Database.
 The schema is designed to manage:
@@ -12,8 +12,8 @@ Products purchased and linked to stores.
 
 Vehicles associated with stores.
 
-### Database Schema
-#### 1. managers
+## B. Database Schema
+### 1. managers 🤵‍♂️:
 
 Stores information about store managers.
 
@@ -23,7 +23,7 @@ managerName (VARCHAR(50), NOT NULL) – Manager’s full name.
 
 contact (JSON, NOT NULL) – Contact information (e.g., { "email": "john@company.com", "tel": "+254700000000" }).
 
-#### 2. stores
+### 2. stores 🏛️:
 
 Contains store details and links to managers.
 
@@ -35,7 +35,7 @@ address (JSON, NOT NULL) – Address information (e.g., { "county": "Nairobi", "
 
 managerID (INT, Foreign Key) – References managers(managerID).
 
-#### 3. products
+### 3. products 🛒:
 
 Tracks products and their purchase information.
 
@@ -47,7 +47,7 @@ date_of_purchase (DATE, NOT NULL) – Date the product was purchased.
 
 storeID (INT, Foreign Key) – References stores(storeID).
 
-#### 4. vehicles
+### 4. vehicles 🚚:
 
 Maintains vehicle information linked to stores.
 
@@ -55,8 +55,8 @@ regNo (VARCHAR(20), Primary Key) – Vehicle registration number.
 
 storeID (INT, Foreign Key) – References stores(storeID).
 
-### How to Run
-#### Prerequisites
+## C. How to Run 🧑‍💻
+### Prerequisites
 
 Install MySQL 5.7+ or MariaDB 10.2+ (required for JSON field support).
 
@@ -70,10 +70,12 @@ Open your SQL client and connect to your server.
 
 Run the SQL script:
 
-mysql -u your_username -p < inventory.sql
+``` mysql -u your_username -p < path_to_downloaded_sql_file ```
 
 
-#### Confirm database creation:
+### D. Confirm database creation 🚀
+```
 SHOW DATABASES;
 USE Inventory;
 SHOW TABLES;
+```
