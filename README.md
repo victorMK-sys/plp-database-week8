@@ -73,7 +73,7 @@ Run the SQL script:
 ``` mysql -u your_username -p < path_to_downloaded_sql_file ```
 
 
-### D. Confirm database creation 🚀
+## D. Confirm database creation 🚀
 ```
 SHOW DATABASES;
 USE Inventory;
